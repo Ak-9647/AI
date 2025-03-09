@@ -1,4 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Shopping List Generator
+
+An AI-powered shopping list generator built with Next.js, Convex, and Clerk authentication.
+
+## Overview
+
+This application allows you to generate organized shopping lists from recipe descriptions using AI. It categorizes ingredients and creates a structured, easy-to-use shopping list.
+
+## Features
+
+- AI-powered ingredient organization
+- Beautiful modern UI
+- User authentication with Clerk
+- Real-time updates with Convex backend
+- Responsive design
 
 ## Getting Started
 
@@ -16,21 +30,40 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You'll also need to run the Convex development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npx convex dev
+```
+
+### Environment Setup
+
+Create a `.env.local` file with the following variables:
+
+```
+NEXT_PUBLIC_CONVEX_URL=your_convex_url_here
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+OPENAI_API_KEY=your_openai_api_key
+```
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Convex](https://www.convex.dev/) - Backend database and API
+- [Clerk](https://clerk.com/) - Authentication
+- [OpenAI API](https://openai.com/) - AI-powered list generation
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Convex Documentation](https://docs.convex.dev/)
+- [Clerk Documentation](https://clerk.com/docs)
+- [OpenAI API Documentation](https://platform.openai.com/docs)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy the Next.js frontend is to use [Vercel](https://vercel.com/).
